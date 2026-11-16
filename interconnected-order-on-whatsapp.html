@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Interconnected Medical Equipment and Supplies Trading, Solano, Nueva Vizcaya — FDA-licensed importer of hospital supplies from India. Request free samples, start a 2-week trial order, or set up a 3, 6 or 12-month supply contract. Orders go directly to Prince on WhatsApp." />
+<link rel="icon" href="data:," />
+<title>Interconnected Medical Equipment and Supplies Trading — Order on WhatsApp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f2f6fa; --surface:#ffffff; --surface2:#eaf1f8; --ink:#10222f; --muted:#526a7a;
+    --line:#d5e1ec; --blue:#0b5fa5; --blue-dark:#084a82; --blue-deep:#073763; --blue-soft:#e3eef8;
+    --sky:#7db9e8; --amber:#a86e0a; --amber-soft:#fdf3d7; --wa:#1faa55; --wa-dark:#178a44; --viber:#7360f2;
+    --danger:#b42318; --radius:14px; --shadow:0 10px 30px rgba(7,55,99,.10);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0a141c; --surface:#12222f; --surface2:#1a2f42; --ink:#eaf3fa; --muted:#9db4c4;
+      --line:#22394d; --blue:#4da3e0; --blue-dark:#7db9e8; --blue-deep:#0d2a44; --blue-soft:#14304b;
+      --amber:#fbbf24; --amber-soft:#33270a; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Manrope",system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Archivo","Manrope",sans-serif;line-height:1.14;margin:0;letter-spacing:-.01em}
+  p{margin:0}
+  a{color:inherit}
+  button,[role="button"],select,summary,input,textarea{font:inherit}
+  button,select,summary,input:not([type="checkbox"]){min-height:44px}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+
+  /* Credential strip */
+  .credbar{background:var(--blue-deep);color:#d9eaf8;font-size:12.5px}
+  .credbar-in{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;padding:7px 0}
+  .credbar b{color:#fff;font-weight:800}
+  .credbar .dot{opacity:.45}
+  @media (max-width:640px){.credbar .hide-m{display:none}}
+
+  /* Header */
+  .topbar{position:sticky;top:0;z-index:40;background:var(--surface);border-bottom:1px solid var(--line)}
+  .topbar-in{display:flex;align-items:center;gap:12px;padding:11px 0}
+  .brand{display:flex;align-items:center;gap:12px;min-width:0;text-decoration:none}
+  .mark{width:46px;height:46px;flex:none;border-radius:11px;background:var(--blue-deep);color:#fff;display:grid;place-items:center;font-family:"Archivo";font-weight:800;font-size:19px;letter-spacing:.02em}
+  @media (prefers-color-scheme: dark){.mark{background:var(--blue);color:#06223c}}
+  .brand b{display:block;font-size:15.5px;line-height:1.2}
+  .brand .full{display:block}
+  .brand span{display:block;font-size:12px;color:var(--muted)}
+  .top-actions{margin-left:auto;display:flex;gap:8px;align-items:center;flex:none}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;padding:10px 16px;font-weight:800;font-size:14px;border:1px solid transparent;cursor:pointer;text-decoration:none;min-height:44px;transition:transform .12s ease, background .12s ease}
+  .btn:active{transform:scale(.98)}
+  .btn-wa{background:var(--wa);color:#fff}
+  .btn-wa:hover{background:var(--wa-dark)}
+  .btn-viber{background:var(--viber);color:#fff}
+  .btn-viber:hover{background:#5e4de0}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+  .btn-blue{background:var(--blue);color:#fff}
+  @media (prefers-color-scheme: dark){.btn-blue{color:#06223c}}
+  .btn-blue:hover{background:var(--blue-dark)}
+  .btn-sm{padding:8px 12px;font-size:13px;min-height:40px}
+  .hide-sm{display:inline-flex}
+  @media (max-width:760px){.hide-sm{display:none}.brand span{display:none}.brand b{font-size:14px}}
+
+  /* Hero */
+  .hero{background:var(--blue-deep);color:#eaf3fa}
+  .hero-in{padding:40px 0 36px;display:grid;grid-template-columns:1.35fr .85fr;gap:28px;align-items:start}
+  @media (max-width:880px){.hero-in{grid-template-columns:1fr;padding:28px 0 26px}}
+  .hero .tagline{font-size:13px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--sky);margin-bottom:12px}
+  .hero h1{font-size:clamp(29px,4.6vw,44px);font-weight:800;color:#fff;max-width:20ch}
+  .hero h1 em{font-style:normal;color:var(--sky)}
+  .hero p.lead{margin-top:13px;font-size:16.5px;color:#c3d9ec;max-width:58ch}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px;max-width:640px}
+  @media (max-width:560px){.stats{grid-template-columns:1fr 1fr}}
+  .stat{border:1px solid rgba(255,255,255,.22);border-radius:11px;padding:11px 12px;background:rgba(255,255,255,.05)}
+  .stat b{display:block;font-family:"Archivo";font-size:19px;color:#fff;line-height:1.1}
+  .stat span{display:block;font-size:11.8px;color:#b9d2e8;margin-top:3px;line-height:1.35}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .hero-card{background:#fff;color:#10222f;border-radius:var(--radius);padding:19px;box-shadow:var(--shadow)}
+  .hero-card h3{font-size:15px;margin-bottom:4px}
+  .hero-card p{font-size:13.5px;color:#526a7a}
+  .hero-card .person{display:flex;gap:12px;align-items:center;margin-top:13px;padding-top:13px;border-top:1px solid #e0eaf2}
+  .avatar{width:46px;height:46px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800;font-family:"Archivo";flex:none}
+  .hero-card .person b{display:block;font-size:14.5px}
+  .hero-card .person span{display:block;font-size:12.5px;color:#526a7a}
+  .hero-card a.wa-big{margin-top:14px;width:100%}
+  .hero-card .license{margin-top:13px;font-size:12px;color:#526a7a;border-top:1px solid #e0eaf2;padding-top:11px}
+  .hero-card .license b{color:#10222f}
+
+  /* Trust badges */
+  .trust{background:var(--surface);border-bottom:1px solid var(--line)}
+  .trust-in{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:16px 0}
+  @media (max-width:880px){.trust-in{grid-template-columns:1fr 1fr}}
+  .badge{display:flex;gap:11px;align-items:flex-start;padding:6px 16px 6px 0}
+  .badge svg{flex:none;margin-top:2px;color:var(--blue)}
+  .badge b{display:block;font-size:13.5px;line-height:1.3}
+  .badge span{display:block;font-size:12.3px;color:var(--muted);line-height:1.4;margin-top:1px}
+
+  /* Sections */
+  section{padding:32px 0 6px}
+  .sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:15px;flex-wrap:wrap}
+  .sec-head h2{font-size:24px;font-weight:800}
+  .sec-head p{color:var(--muted);font-size:14.5px;max-width:64ch;margin-top:5px}
+  .step-label{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+
+  /* Plans */
+  .plans{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  @media (max-width:980px){.plans{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:600px){.plans{grid-template-columns:1fr 1fr}}
+  .plan{position:relative;text-align:left;background:var(--surface);border:2px solid var(--line);border-radius:var(--radius);padding:15px 14px;cursor:pointer;min-height:44px;width:100%}
+  .plan:hover{border-color:var(--blue)}
+  .plan[aria-checked="true"]{border-color:var(--blue);background:var(--blue-soft)}
+  .plan .tag{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+  .plan b{display:block;font-size:16.5px;margin:4px 0 3px;font-family:"Archivo"}
+  .plan span{display:block;font-size:12.8px;color:var(--muted);line-height:1.45}
+  .plan.pop{border-color:var(--amber)}
+  .plan.pop .tag{color:var(--amber)}
+  .plan.pop[aria-checked="true"]{background:var(--amber-soft);border-color:var(--amber)}
+  .plan .check{position:absolute;top:10px;right:10px;width:22px;height:22px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-size:12px;color:transparent;background:var(--surface)}
+  .plan[aria-checked="true"] .check{background:var(--blue);border-color:var(--blue);color:#fff}
+
+  /* How to order — 5 steps */
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  @media (max-width:1020px){.steps{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:640px){.steps{grid-template-columns:1fr 1fr}}
+  @media (max-width:420px){.steps{grid-template-columns:1fr}}
+  .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 15px}
+  .step .n{width:32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px;margin-bottom:10px;font-family:"Archivo"}
+  @media (prefers-color-scheme: dark){.step .n{color:#06223c}}
+  .step b{display:block;font-size:14.5px;margin-bottom:4px}
+  .step p{font-size:13px;color:var(--muted)}
+  .step p b{color:var(--ink);font-size:13px;display:inline;margin:0}
+  .terms{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+  @media (max-width:640px){.terms{grid-template-columns:1fr}}
+  .term{display:flex;gap:11px;align-items:flex-start;background:var(--blue-soft);border:1px solid var(--line);border-radius:var(--radius);padding:13px 15px;font-size:13.5px}
+  .term svg{flex:none;color:var(--blue);margin-top:2px}
+  .term b{color:var(--ink)}
+
+  /* Catalog toolbar */
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+  .search{flex:1 1 240px;position:relative}
+  .search input{width:100%;padding:11px 14px 11px 40px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
+  .search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.55}
+  .filters{display:flex;gap:7px;flex-wrap:wrap}
+  .filter{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;cursor:pointer;min-height:40px}
+  .filter[aria-pressed="true"]{background:var(--blue-deep);color:#fff;border-color:var(--blue-deep)}
+  @media (prefers-color-scheme: dark){.filter[aria-pressed="true"]{background:var(--blue);color:#06223c;border-color:var(--blue)}}
+  .count-note{font-size:13px;color:var(--muted);margin-bottom:12px}
+  .count-note b{color:var(--ink)}
+
+  /* Product grid + order panel */
+  .shop{display:grid;grid-template-columns:1fr 368px;gap:18px;align-items:start}
+  @media (max-width:980px){.shop{grid-template-columns:1fr}}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+  @media (max-width:560px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px;display:flex;flex-direction:column;gap:7px}
+  .card .cat{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+  .card h3{font-size:16px;font-weight:700}
+  .card .sizes{font-size:13px;color:var(--muted)}
+  .card .desc{font-size:13px;color:var(--muted);flex:1}
+  .card .row{display:flex;gap:8px;align-items:center;margin-top:4px;flex-wrap:wrap}
+  .qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .qty button{width:40px;height:44px;border:0;background:var(--surface2);color:var(--ink);font-size:18px;font-weight:800;cursor:pointer}
+  .qty output{min-width:44px;text-align:center;font-weight:800;font-size:14px}
+  .qty small{font-size:11px;color:var(--muted);margin-left:2px}
+  .in-cart{font-size:12.5px;font-weight:800;color:var(--blue)}
+  .empty-note{background:var(--surface);border:1px dashed var(--line);border-radius:var(--radius);padding:22px;text-align:center;color:var(--muted);font-size:14px;grid-column:1/-1}
+
+  /* Order panel */
+  .panel{position:sticky;top:78px;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+  @media (max-width:980px){.panel{position:static}}
+  .panel-head{background:var(--blue-deep);color:#fff;padding:15px 17px}
+  .panel-head h3{font-size:16px;color:#fff}
+  .panel-head p{font-size:12.8px;color:#c3d9ec;margin-top:2px}
+  .panel-body{padding:14px 16px 16px}
+  .plan-echo{font-size:13px;font-weight:700;background:var(--surface2);border-radius:9px;padding:9px 11px;margin-bottom:12px}
+  .plan-echo span{color:var(--blue)}
+  .cart-list{list-style:none;margin:0 0 6px;padding:0;display:grid;gap:9px}
+  .cart-item{display:flex;gap:9px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:9px 10px}
+  .cart-item .info{flex:1;min-width:0}
+  .cart-item b{display:block;font-size:13.5px;line-height:1.3}
+  .cart-item .mode{font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+  .mode.order{color:var(--blue)} .mode.sample{color:var(--amber)}
+  .cart-item .qty button{width:34px;height:38px}
+  .cart-item .qty output{min-width:32px;font-size:13px}
+  .remove{border:0;background:none;color:var(--danger);font-size:12.5px;font-weight:700;cursor:pointer;padding:6px 2px;min-height:36px}
+  .cart-empty{font-size:13.5px;color:var(--muted);border:1px dashed var(--line);border-radius:10px;padding:13px;text-align:center;margin-bottom:6px}
+  .form-title{font-size:13px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--blue);margin:16px 0 2px}
+  .field{margin-top:11px}
+  .field label{display:block;font-size:12.5px;font-weight:800;margin-bottom:5px}
+  .field label i{font-style:normal;color:var(--danger)}
+  .field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--surface);color:var(--ink)}
+  .field textarea{min-height:58px;resize:vertical}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media (max-width:480px){.two{grid-template-columns:1fr}}
+  .send{width:100%;margin-top:14px;font-size:15.5px;padding:13px}
+  .send-note{font-size:12px;color:var(--muted);text-align:center;margin-top:8px}
+  .err{display:none;font-size:13px;font-weight:700;color:var(--danger);background:#fdf0ef;border:1px solid #f3c6c1;border-radius:9px;padding:9px 11px;margin-top:11px}
+  @media (prefers-color-scheme: dark){.err{background:#3a1512;border-color:#6e2a24}}
+  .err.show{display:block}
+
+  /* Info cols / FAQ */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+  @media (max-width:760px){.cols{grid-template-columns:1fr}}
+  .info-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+  .info-card h3{font-size:16px;margin-bottom:10px}
+  .info-card ul{margin:0;padding-left:18px;font-size:14px;color:var(--muted);display:grid;gap:7px}
+  .info-card ul b{color:var(--ink)}
+  details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:4px 16px;margin-bottom:9px}
+  summary{cursor:pointer;font-weight:800;font-size:14.5px;padding:10px 0;min-height:44px;display:flex;align-items:center}
+  details p{font-size:14px;color:var(--muted);padding:0 0 14px}
+
+  /* Footer */
+  footer{margin-top:38px;border-top:1px solid var(--line);background:var(--surface)}
+  .foot{padding:24px 0 92px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px;font-size:13px;color:var(--muted)}
+  @media (max-width:760px){.foot{grid-template-columns:1fr}}
+  .foot b{color:var(--ink)}
+  .foot h4{font-family:"Archivo";font-size:13.5px;color:var(--ink);margin:0 0 7px}
+  .foot a{text-decoration:none;font-weight:700}
+  .foot .cta-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+
+  /* Mobile sticky bar */
+  .mobilebar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--surface);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:none;gap:10px;align-items:center;box-shadow:0 -6px 20px rgba(0,0,0,.08);transform:translateY(110%);transition:transform .25s ease}
+  @media (max-width:980px){.mobilebar{display:flex}}
+  .mobilebar.show{transform:translateY(0)}
+  .mobilebar .count{font-size:13.5px;font-weight:800;flex:1}
+  .mobilebar .count span{display:block;font-size:12px;color:var(--muted);font-weight:600}
+  .toast{position:fixed;left:50%;transform:translate(-50%,20px);bottom:86px;z-index:60;background:var(--blue-deep);color:#fff;font-size:13.5px;font-weight:700;padding:11px 16px;border-radius:999px;opacity:0;pointer-events:none;transition:all .25s ease;max-width:92vw;text-align:center}
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="credbar">
+  <div class="wrap credbar-in">
+    <span><b>FDA License to Operate:</b> CDRRHR-RII-MDI/W-2614852</span>
+    <span class="dot hide-m">·</span>
+    <span class="hide-m">Solano, Nueva Vizcaya, Philippines</span>
+    <span class="dot hide-m">·</span>
+    <span class="hide-m">Importer &amp; distributor of medical devices and supplies</span>
+  </div>
+</div>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#top" aria-label="Interconnected Medical Equipment and Supplies Trading">
+      <div class="mark" aria-hidden="true">IN</div>
+      <div>
+        <b><span class="full">Interconnected Medical Equipment</span> and Supplies Trading</b>
+        <span>Solano, Nueva Vizcaya · FDA License CDRRHR-RII-MDI/W-2614852</span>
+      </div>
+    </a>
+    <div class="top-actions">
+      <a class="btn btn-ghost hide-sm" href="#how">How to order</a>
+      <a class="btn btn-ghost hide-sm" href="#products">Catalogue</a>
+      <a class="btn btn-wa" href="https://wa.me/639198569899?text=Hello%20Prince%2C%20I%20have%20a%20question%20about%20Interconnected%20medical%20supplies." target="_blank" rel="noopener">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.7 1.2 1.5 2 2.7 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+        +63 919 856 9899
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap hero-in">
+    <div>
+      <div class="tagline">Connecting Quality Care from India to the Philippines</div>
+      <h1>Hospital supplies your team can <em>trust</em> — ordered in minutes.</h1>
+      <p class="lead">Interconnected supplies hospitals, clinics and distributors with quality medical consumables and equipment from GMP-certified, CE-compliant manufacturers in India. Request free samples, start a 2-week trial, or set up a supply contract — every order begins with an official quotation, with no prices charged from this page.</p>
+      <div class="stats">
+        <div class="stat"><b>310+</b><span>Product lines available to order</span></div>
+        <div class="stat"><b>FDA</b><span>Licensed to Operate — importer &amp; distributor</span></div>
+        <div class="stat"><b>GMP</b><span>Certified manufacturing partners in India</span></div>
+        <div class="stat"><b>CE</b><span>Compliant products for hospital use</span></div>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-wa" href="#products">Browse the catalogue ↓</a>
+        <button class="btn" style="background:#fff;color:#073763" data-quick-plan="sample">Request free samples</button>
+        <button class="btn" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.45)" data-quick-plan="trial">Start a trial order</button>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="Your contact">
+      <h3>Your direct contact</h3>
+      <p>Every enquiry from this page goes straight to Prince — no call centre, no ticket queue. You receive an official itemised quotation first, and only confirm when you are ready.</p>
+      <div class="person">
+        <div class="avatar" aria-hidden="true">P</div>
+        <div>
+          <b>Prince — Representative</b>
+          <span>Interconnected Medical Equipment and Supplies Trading</span>
+        </div>
+      </div>
+      <a class="btn btn-wa wa-big" href="https://wa.me/639198569899?text=Hello%20Prince%2C%20I%20found%20the%20Interconnected%20ordering%20page.%20I%20would%20like%20to%20ask%20about%20your%20products." target="_blank" rel="noopener">Message Prince on WhatsApp</a>
+      <a class="btn btn-viber wa-big" style="margin-top:8px" href="viber://chat?number=%2B639198569899">Call / Message on Viber</a>
+      <p style="margin-top:8px;text-align:center;font-size:12.5px">WhatsApp &amp; Viber: +63 919 856 9899</p>
+      <p class="license"><b>FDA License to Operate:</b> CDRRHR-RII-MDI/W-2614852<br>Solano, Nueva Vizcaya, Philippines</p>
+    </aside>
+  </div>
+</div>
+
+<div class="trust" aria-label="Why hospitals trust Interconnected">
+  <div class="wrap trust-in">
+    <div class="badge">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3z"/><path d="m9 12 2 2 4-4"/></svg>
+      <div><b>FDA-Licensed Importer</b><span>License to Operate CDRRHR-RII-MDI/W-2614852, issued for medical device importation and distribution.</span></div>
+    </div>
+    <div class="badge">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5.5"/></svg>
+      <div><b>GMP-Certified Manufacturers</b><span>Products sourced from GMP-certified factories in India with documented quality systems.</span></div>
+    </div>
+    <div class="badge">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M8 15h4"/></svg>
+      <div><b>CE-Compliant Products</b><span>Medical consumables and devices that meet CE compliance requirements for hospital use.</span></div>
+    </div>
+    <div class="badge">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z"/><path d="M14 3v6h6M9 14h6M9 17h4"/></svg>
+      <div><b>Official Quotation First</b><span>Itemised prices in writing, valid for 15 days — before any Purchase Order or payment.</span></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- STEP 1: PLAN -->
+  <section id="plan" aria-labelledby="plan-h">
+    <div class="sec-head">
+      <div>
+        <div class="step-label">Step 1 · Choose how to start</div>
+        <h2 id="plan-h">How do you want to begin?</h2>
+        <p>Most Philippine hospitals start small, test the quality on the ward, then move to a supply contract. Pick one — you can change it anytime before you send.</p>
+      </div>
+    </div>
+    <div class="plans" role="radiogroup" aria-label="Order type">
+      <button class="plan" role="radio" aria-checked="false" data-plan="sample">
+        <span class="check">✓</span><span class="tag">Free · No commitment</span>
+        <b>Request Samples</b>
+        <span>Try a few pieces first. Your nurses and doctors test the quality before you spend anything.</span>
+      </button>
+      <button class="plan" role="radio" aria-checked="true" data-plan="trial">
+        <span class="check">✓</span><span class="tag">Most popular start</span>
+        <b>Trial Order · 2 Weeks</b>
+        <span>A small 2-week supply for one department. Prove the quality and delivery, then decide.</span>
+      </button>
+      <button class="plan" role="radio" aria-checked="false" data-plan="3m">
+        <span class="check">✓</span><span class="tag">Supply contract</span>
+        <b>3-Month Contract</b>
+        <span>Monthly scheduled delivery for 3 months, with prices confirmed in your quotation.</span>
+      </button>
+      <button class="plan" role="radio" aria-checked="false" data-plan="6m">
+        <span class="check">✓</span><span class="tag">Supply contract</span>
+        <b>6-Month Contract</b>
+        <span>Half a year of steady supply. Less re-ordering work for your purchasing team.</span>
+      </button>
+      <button class="plan pop" role="radio" aria-checked="false" data-plan="12m">
+        <span class="check">✓</span><span class="tag">Best for big hospitals</span>
+        <b>12-Month Contract</b>
+        <span>A full-year supply agreement — priority stock and scheduled monthly deliveries all year.</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- HOW TO ORDER -->
+  <section id="how" aria-labelledby="how-h">
+    <div class="sec-head">
+      <div>
+        <div class="step-label">How to order</div>
+        <h2 id="how-h">Five steps, the standard Philippine hospital process</h2>
+        <p>Nothing new for your purchasing team to learn — this follows the process hospitals already use.</p>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><b>Request a Sample</b><p>Tap <b>Sample</b> on any product below and send your list. Sample pieces are free, so your team can check the quality first.</p></div>
+      <div class="step"><div class="n">2</div><b>Trial Order — 2 Weeks</b><p>Order a small 2-week supply for one department — a ward, ER, ICU, or a specialty like Neurology or Internal Medicine.</p></div>
+      <div class="step"><div class="n">3</div><b>Official Quotation</b><p>Prince replies with a formal, itemised quotation. It is <b>valid for 15 days</b> — no price is final until you have seen it.</p></div>
+      <div class="step"><div class="n">4</div><b>Purchase Order</b><p>Your purchasing or procurement office issues a PO against the quotation, the standard way Philippine hospitals buy.</p></div>
+      <div class="step"><div class="n">5</div><b>Delivery</b><p>Goods arrive with a <b>Delivery Receipt and Sales Invoice</b>. Terms are confirmed in your quotation before delivery.</p></div>
+    </div>
+    <div class="terms">
+      <div class="term">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/></svg>
+        <p><b>First trial orders: Cash on Delivery (COD).</b> Pay only when your supplies arrive and are received by your hospital.</p>
+      </div>
+      <div class="term">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <p><b>Supply contracts: Net 30 terms.</b> Established contract accounts (3, 6 or 12 months) pay on Net 30, as agreed in writing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 2: PRODUCTS + ORDER PANEL -->
+  <section id="products" aria-labelledby="prod-h">
+    <div class="sec-head">
+      <div>
+        <div class="step-label">Step 2 · Choose your products</div>
+        <h2 id="prod-h">Product catalogue</h2>
+        <p>Set a quantity with the + / − stepper and tap <b>Add</b>, or tap <b>Sample</b> on any item to request free sample pieces instead. Prices are confirmed in your official quotation — this page shows no prices by design, because hospital pricing depends on quantity, contract length and delivery location.</p>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="search">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="search" type="search" placeholder="Search — e.g. syringe, cannula, Foley, oxygen…" aria-label="Search products">
+      </div>
+      <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+    </div>
+    <p class="count-note">Showing the <b>18 core products</b> hospitals order most. Interconnected carries <b>310+ product lines</b> in total — if your hospital uses an item that is not listed here, ask Prince on WhatsApp and he will check it for you.</p>
+
+    <div class="shop">
+      <div class="grid" id="grid"></div>
+
+      <!-- STEP 3: ORDER PANEL -->
+      <aside class="panel" id="order" aria-labelledby="order-h">
+        <div class="panel-head">
+          <h3 id="order-h">Step 3 · Your order &amp; delivery details</h3>
+          <p>Review your list, add your facility details, then send it to Prince.</p>
+        </div>
+        <div class="panel-body">
+          <div class="plan-echo">You are starting with: <span id="planEcho">Trial Order · 2 Weeks</span></div>
+          <div id="cartArea"></div>
+
+          <form id="buyerForm" novalidate>
+            <div class="form-title">Your facility &amp; delivery details</div>
+            <div class="field">
+              <label for="f-hospital">Hospital / Clinic name <i>*</i></label>
+              <input id="f-hospital" type="text" placeholder="e.g. De Vera Medical Center, Inc." autocomplete="organization">
+            </div>
+            <div class="two">
+              <div class="field">
+                <label for="f-name">Contact person <i>*</i></label>
+                <input id="f-name" type="text" placeholder="e.g. Dr. / Nurse / Purchasing Officer" autocomplete="name">
+              </div>
+              <div class="field">
+                <label for="f-dept">Department</label>
+                <input id="f-dept" type="text" placeholder="e.g. Neuro, IM Ward, ER, Procurement">
+              </div>
+            </div>
+            <div class="two">
+              <div class="field">
+                <label for="f-city">City / Province</label>
+                <input id="f-city" type="text" placeholder="e.g. Santiago City, Isabela">
+              </div>
+              <div class="field">
+                <label for="f-phone">Your mobile (optional)</label>
+                <input id="f-phone" type="tel" placeholder="09xx xxx xxxx" autocomplete="tel">
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-address">Delivery address</label>
+              <textarea id="f-address" placeholder="e.g. Receiving / Central Supply, Four Lanes, Calaocan, Santiago City — where should the samples or order be delivered?"></textarea>
+            </div>
+            <div class="field">
+              <label for="f-notes">Notes for Prince (optional)</label>
+              <textarea id="f-notes" placeholder="e.g. Please quote with delivery to our hospital. We need this monthly."></textarea>
+            </div>
+            <div class="err" id="formErr" role="alert"></div>
+            <button type="submit" class="btn btn-wa send">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.7 1.2 1.5 2 2.7 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+              Send my order to Prince on WhatsApp
+            </button>
+            <p class="send-note">Opens WhatsApp to <b>+63 919 856 9899</b> with your list and delivery details already written. Nothing is final — Prince replies with your official quotation first.</p>
+            <a class="btn btn-viber" style="width:100%;margin-top:12px" href="viber://chat?number=%2B639198569899">Call / Message on Viber</a>
+            <p class="send-note">Prefer Viber? Call or message Prince on Viber on the same number: <b>+63 919 856 9899</b></p>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ABOUT / CONTRACTS -->
+  <section aria-labelledby="why-h">
+    <div class="sec-head"><div><h2 id="why-h">Good to know before you order</h2></div></div>
+    <div class="cols">
+      <div class="info-card">
+        <h3>About Interconnected</h3>
+        <ul>
+          <li><b>Interconnected Medical Equipment and Supplies Trading</b> — Solano, Nueva Vizcaya, Philippines</li>
+          <li><b>FDA License to Operate:</b> CDRRHR-RII-MDI/W-2614852</li>
+          <li><b>310+ product lines</b> sourced from <b>GMP-certified, CE-compliant manufacturers in India</b></li>
+          <li>Brands carried include <b>Vaxo-Ven</b> (syringes &amp; needles), <b>Vaxo-Flon</b> (IV cannula) and <b>Infuzor</b> (IV sets)</li>
+          <li>Serving hospitals, clinics and distributors across Region II and Luzon</li>
+          <li>Your contact: <b>Prince — Representative</b>, WhatsApp &amp; Viber +63 919 856 9899</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>Contracts, the simple version</h3>
+        <ul>
+          <li><b>Samples:</b> free sample pieces first, so your team tests quality before any commitment</li>
+          <li><b>Trial (2 weeks):</b> small quantity, one department — test quality and delivery; COD terms</li>
+          <li><b>3 / 6 / 12 months:</b> agreed monthly quantity, delivered on schedule, one quotation covers the term; Net 30 terms</li>
+          <li><b>Prices</b> are as stated in your signed quotation for the contract period</li>
+          <li><b>Every delivery</b> comes with a Delivery Receipt and Sales Invoice</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE SERVE -->
+  <section aria-labelledby="serve-h">
+    <div class="sec-head">
+      <div>
+        <h2 id="serve-h">Who orders from Interconnected</h2>
+        <p>The same catalogue, samples and contract terms are open to every type of healthcare buyer.</p>
+      </div>
+    </div>
+    <div class="cols">
+      <div class="info-card">
+        <h3>Hospitals &amp; medical centres</h3>
+        <ul>
+          <li>Ward, ER, ICU, OR and OPD consumables on scheduled monthly delivery</li>
+          <li>Department trials — start with one ward or specialty, expand when your team is satisfied</li>
+          <li>Equipment for new wings and ward upgrades, quoted on request</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>Clinics, distributors &amp; others</h3>
+        <ul>
+          <li>Private clinics, diagnostic centres, pharmacies and rural health units</li>
+          <li>Distributors — message Prince on WhatsApp to discuss distribution quantities</li>
+          <li>School clinics and company clinics ordering BP monitors, thermometers and basic consumables</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section aria-labelledby="faq-h">
+    <div class="sec-head"><div><h2 id="faq-h">Common questions</h2></div></div>
+    <details>
+      <summary>Are the samples really free?</summary>
+      <p>Yes — sample pieces of syringes, needles, IV cannula and IV sets are free so your nurses and doctors can test the quality. Choose “Request Samples” in Step 1, tap Sample on the items you want, and send. Prince will confirm the sample delivery on WhatsApp.</p>
+    </details>
+    <details>
+      <summary>Why are there no prices on this page?</summary>
+      <p>Hospital prices depend on quantity, contract length and delivery location, so every buyer gets an official itemised quotation on WhatsApp first — valid for 15 days. You never pay anything from this page, and nothing is confirmed until your hospital issues a Purchase Order.</p>
+    </details>
+    <details>
+      <summary>What is the minimum for a trial order?</summary>
+      <p>A trial order is sized for about 2 weeks of use in one department — for example a ward, ER, ICU or a specialty like Neurology or Internal Medicine. Tell Prince your department’s usual consumption in the notes, and the quotation will be sized to match. First trial orders are on COD terms.</p>
+    </details>
+    <details>
+      <summary>How does a 3, 6 or 12-month contract work?</summary>
+      <p>You agree a monthly quantity per product. Interconnected delivers on schedule each month under one supply agreement, with prices as stated in your signed quotation and Net 30 payment terms. It removes monthly re-ordering and protects you from running out of ward consumables.</p>
+    </details>
+    <details>
+      <summary>Where do you deliver?</summary>
+      <p>Interconnected is based in Solano, Nueva Vizcaya and serves hospitals and clinics across Region II (Nueva Vizcaya, Isabela, Cagayan, Quirino) and elsewhere in Luzon. Every delivery comes with a Delivery Receipt and Sales Invoice. Delivery time and any delivery charge are stated clearly in your quotation before you confirm.</p>
+    </details>
+    <details>
+      <summary>I’m a clinic, pharmacy or school — can I order too?</summary>
+      <p>Yes. Private clinics, diagnostic centres, pharmacies, school clinics and rural health units can request samples, trial orders and contracts the same way. Just write your type of facility in the notes.</p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <h4>Interconnected Medical Equipment and Supplies Trading</h4>
+      Solano, Nueva Vizcaya, Philippines<br>
+      FDA License to Operate: <b>CDRRHR-RII-MDI/W-2614852</b><br>
+      Connecting Quality Care from India to the Philippines — 310+ product lines from GMP-certified, CE-compliant manufacturers.
+    </div>
+    <div>
+      <h4>Orders &amp; enquiries</h4>
+      <b>Prince — Representative</b><br>
+      WhatsApp: <a href="https://wa.me/639198569899" target="_blank" rel="noopener">+63 919 856 9899</a><br>
+      Viber: <a href="viber://chat?number=%2B639198569899">+63 919 856 9899</a>
+      <div class="cta-row">
+        <a class="btn btn-wa btn-sm" href="https://wa.me/639198569899" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-viber btn-sm" href="viber://chat?number=%2B639198569899">Viber</a>
+      </div>
+    </div>
+    <div>
+      <h4>How ordering works</h4>
+      1 · Request a free sample<br>
+      2 · Trial order — 2 weeks<br>
+      3 · Official quotation, valid 15 days<br>
+      4 · Your hospital issues a PO<br>
+      5 · Delivery with receipt &amp; invoice<br>
+      COD for first trials · Net 30 for contracts
+    </div>
+  </div>
+</footer>
+
+<div class="mobilebar" id="mobilebar">
+  <div class="count"><span id="mbCount">0 items in your list</span><span id="mbPlan">Trial Order · 2 Weeks</span></div>
+  <a class="btn btn-blue" href="#order">Review &amp; send →</a>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+var WA_NUMBER = "639198569899";
+
+var PLANS = {
+  sample: { label: "Request Free Samples", short: "Free Samples", line: "I would like to REQUEST FREE SAMPLES to test the quality first." },
+  trial:  { label: "Trial Order · 2 Weeks", short: "Trial Order", line: "I would like to start a TRIAL ORDER (2-week supply for one department)." },
+  "3m":   { label: "3-Month Supply Contract", short: "3-Month Contract", line: "I would like to start a 3-MONTH SUPPLY CONTRACT with monthly scheduled delivery." },
+  "6m":   { label: "6-Month Supply Contract", short: "6-Month Contract", line: "I would like to start a 6-MONTH SUPPLY CONTRACT with monthly scheduled delivery." },
+  "12m":  { label: "12-Month Supply Contract", short: "12-Month Contract", line: "I would like to start a 12-MONTH SUPPLY CONTRACT with monthly scheduled delivery." }
+};
+
+var CATEGORIES = ["All", "Syringes & Needles", "IV Therapy", "Catheters & Tubes", "Respiratory", "Diagnostics & Equipment"];
+
+var PRODUCTS = [
+  { id:"syr",  cat:"Syringes & Needles", name:"Vaxo-Ven Syringe with Needle", sizes:"1cc · 2ml · 3ml · 5ml · 10ml · 20ml", unit:"pcs", step:100, start:500, desc:"Disposable sterile syringes with needle — the everyday ward workhorse for injections and medication." },
+  { id:"ndl",  cat:"Syringes & Needles", name:"Vaxo-Ven Hypodermic Needle", sizes:"18G · 19G · 21G · 23G · 25G · 26G", unit:"pcs", step:100, start:500, desc:"Sterile disposable hypodermic needles, colour-coded by gauge for fast identification." },
+  { id:"can",  cat:"IV Therapy", name:"Vaxo-Flon IV Cannula", sizes:"18G · 20G · 22G · 24G · 26G", unit:"pcs", step:50, start:100, desc:"IV cannula with injection port and wings — smooth insertion, secure fixing on the ward." },
+  { id:"ivset",cat:"IV Therapy", name:"Infuzor IV Set", sizes:"ECO · Standard", unit:"pcs", step:50, start:100, desc:"Intravenous infusion set for reliable, controlled fluid and medication delivery." },
+  { id:"stop", cat:"IV Therapy", name:"3-Way Stop Cock", sizes:"Standard", unit:"pcs", step:10, start:50, desc:"Three-way stopcock for directing IV flow and adding medication lines without disconnecting." },
+  { id:"ext",  cat:"IV Therapy", name:"Extension Line", sizes:"Standard lengths", unit:"pcs", step:10, start:50, desc:"IV extension tubing — gives patients movement room and keeps lines organised at the bedside." },
+  { id:"btset",cat:"IV Therapy", name:"B.T. Set (Blood Transfusion Set)", sizes:"Standard", unit:"pcs", step:10, start:50, desc:"Blood transfusion set with filter, for safe and controlled transfusion in ward and ER." },
+  { id:"foley",cat:"Catheters & Tubes", name:"Foley Catheter", sizes:"Fr 8 · 10 · 12 · 14 · 16 · 18", unit:"pcs", step:10, start:50, desc:"Two-way Foley balloon catheter for urinary drainage — ward, ICU, OR and ER staple." },
+  { id:"ubag", cat:"Catheters & Tubes", name:"Urine Bag 2000ml", sizes:"2000ml with drain valve", unit:"pcs", step:10, start:50, desc:"Large-capacity urine collection bag with clear measurement markings." },
+  { id:"ryles",cat:"Catheters & Tubes", name:"Ryles Tube (NG Tube)", sizes:"Fr 8 · 10 · 12 · 14 · 16 · 18", unit:"pcs", step:10, start:50, desc:"Nasogastric / Ryles tube for feeding and gastric drainage." },
+  { id:"suc",  cat:"Catheters & Tubes", name:"Suction Catheter", sizes:"Fr 6 · 8 · 10 · 12 · 14 · 16", unit:"pcs", step:10, start:50, desc:"Sterile suction catheter for airway clearing in ward, ICU and emergency care." },
+  { id:"ett",  cat:"Catheters & Tubes", name:"Endotracheal Tube", sizes:"2.5 · 3.0 · 3.5 · 4.0 · 4.5 · 5.0 · 5.5 · 6.0 · 6.5 · 7.0 · 7.5 · 8.0", unit:"pcs", step:5, start:20, desc:"Cuffed and uncuffed ET tubes for OR, ICU and emergency airway management." },
+  { id:"o2",   cat:"Respiratory", name:"Oxygen Mask", sizes:"Adult · Pedia", unit:"pcs", step:10, start:50, desc:"Oxygen therapy mask with tubing — comfortable fit for ward and ER oxygen delivery." },
+  { id:"neb",  cat:"Respiratory", name:"Nebulizer Mask", sizes:"Adult · Pedia", unit:"pcs", step:10, start:50, desc:"Nebulizer mask kit with chamber and tubing for respiratory treatments." },
+  { id:"bp",   cat:"Diagnostics & Equipment", name:"BP Monitor", sizes:"Digital · Aneroid", unit:"units", step:1, start:2, desc:"Blood pressure monitors for wards, OPD clinics, school clinics and health centres." },
+  { id:"oxi",  cat:"Diagnostics & Equipment", name:"Pulse Oximeter", sizes:"Fingertip", unit:"units", step:1, start:2, desc:"Fingertip pulse oximeter — fast SpO2 and pulse checks at triage and bedside." },
+  { id:"therm",cat:"Diagnostics & Equipment", name:"Digital Thermometer", sizes:"Standard", unit:"pcs", step:5, start:20, desc:"Fast, accurate digital thermometers for wards, clinics and school health programmes." },
+  { id:"bed",  cat:"Diagnostics & Equipment", name:"Hospital Beds & Ward Equipment", sizes:"Manual · Electric — ask for options", unit:"units", step:1, start:1, desc:"Hospital beds and ward equipment for new wings, ward upgrades and clinic set-ups. Ask Prince for the current options." }
+];
+
+var state = { plan: "trial", filter: "All", query: "", cart: {} };
+var pendingQty = {};
+PRODUCTS.forEach(function(p){ pendingQty[p.id] = p.start; });
+
+var grid = document.getElementById("grid");
+var filtersEl = document.getElementById("filters");
+var toastEl = document.getElementById("toast");
+var toastTimer = null;
+
+function showToast(msg){
+  toastEl.textContent = msg;
+  toastEl.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function(){ toastEl.classList.remove("show"); }, 2400);
+}
+function fmt(n){ return n.toLocaleString("en-PH"); }
+function productById(id){ for (var i=0;i<PRODUCTS.length;i++){ if (PRODUCTS[i].id===id) return PRODUCTS[i]; } return null; }
+
+/* ---------- Filters ---------- */
+CATEGORIES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "filter"; b.type = "button"; b.textContent = c;
+  b.setAttribute("aria-pressed", c === "All" ? "true" : "false");
+  b.addEventListener("click", function(){
+    state.filter = c;
+    var all = filtersEl.querySelectorAll(".filter");
+    for (var i=0;i<all.length;i++) all[i].setAttribute("aria-pressed", all[i].textContent === c ? "true" : "false");
+    renderGrid();
+  });
+  filtersEl.appendChild(b);
+});
+document.getElementById("search").addEventListener("input", function(e){
+  state.query = e.target.value.trim().toLowerCase();
+  renderGrid();
+});
+
+/* ---------- Product grid ---------- */
+function renderGrid(){
+  grid.innerHTML = "";
+  var visible = PRODUCTS.filter(function(p){
+    var okCat = state.filter === "All" || p.cat === state.filter;
+    var hay = (p.name + " " + p.sizes + " " + p.cat + " " + p.desc).toLowerCase();
+    return okCat && (!state.query || hay.indexOf(state.query) !== -1);
+  });
+  if (!visible.length){
+    var d = document.createElement("div");
+    d.className = "empty-note";
+    d.textContent = "No product matches your search. Clear the search, or message Prince on WhatsApp — with 310+ product lines, he will check the item for you.";
+    grid.appendChild(d);
+    return;
+  }
+  visible.forEach(function(p){
+    var card = document.createElement("article");
+    card.className = "card";
+    var inCart = state.cart[p.id];
+    card.innerHTML =
+      '<div class="cat"></div><h3></h3><div class="sizes"></div><p class="desc"></p>' +
+      '<div class="row">' +
+        '<span class="qty"><button type="button" data-act="minus" aria-label="Decrease quantity">−</button><output></output><button type="button" data-act="plus" aria-label="Increase quantity">+</button></span>' +
+        '<small class="qty" style="border:0"></small>' +
+      '</div>' +
+      '<div class="row">' +
+        '<button type="button" class="btn btn-blue btn-sm" data-act="add">Add to order</button>' +
+        '<button type="button" class="btn btn-ghost btn-sm" data-act="sample">Sample — free</button>' +
+        (inCart ? '<span class="in-cart"></span>' : '') +
+      '</div>';
+    card.querySelector(".cat").textContent = p.cat;
+    card.querySelector("h3").textContent = p.name;
+    card.querySelector(".sizes").textContent = "Sizes: " + p.sizes;
+    card.querySelector(".desc").textContent = p.desc;
+    card.querySelector("output").textContent = fmt(pendingQty[p.id]);
+    card.querySelector("small.qty").textContent = p.unit;
+    if (inCart){
+      card.querySelector(".in-cart").textContent = "✓ In your list: " + fmt(inCart.qty) + " " + p.unit + (inCart.mode === "sample" ? " (samples)" : "");
+    }
+    card.querySelector('[data-act="minus"]').addEventListener("click", function(){
+      pendingQty[p.id] = Math.max(p.step, pendingQty[p.id] - p.step); renderGrid();
+    });
+    card.querySelector('[data-act="plus"]').addEventListener("click", function(){
+      pendingQty[p.id] = pendingQty[p.id] + p.step; renderGrid();
+    });
+    card.querySelector('[data-act="add"]').addEventListener("click", function(){
+      state.cart[p.id] = { qty: pendingQty[p.id], mode: "order" };
+      renderGrid(); renderCart();
+      showToast(p.name + " — added to your order list.");
+    });
+    card.querySelector('[data-act="sample"]').addEventListener("click", function(){
+      var sq = p.unit === "units" ? 1 : Math.min(10, Math.max(5, p.step));
+      if (p.id === "bed") sq = 0;
+      state.cart[p.id] = { qty: sq, mode: "sample" };
+      if (state.plan !== "sample" && !anyOrderItems()) setPlan("sample");
+      renderGrid(); renderCart();
+      showToast(p.id === "bed" ? "Added — Prince will send bed options & photos as your sample info." : p.name + " — free sample request added.");
+    });
+    grid.appendChild(card);
+  });
+}
+function anyOrderItems(){
+  for (var k in state.cart){ if (state.cart[k].mode === "order") return true; }
+  return false;
+}
+
+/* ---------- Plans ---------- */
+function setPlan(key){
+  state.plan = key;
+  var plans = document.querySelectorAll(".plan");
+  for (var i=0;i<plans.length;i++){
+    plans[i].setAttribute("aria-checked", plans[i].getAttribute("data-plan") === key ? "true" : "false");
+  }
+  document.getElementById("planEcho").textContent = PLANS[key].label;
+  document.getElementById("mbPlan").textContent = PLANS[key].label;
+}
+document.querySelectorAll(".plan").forEach(function(el){
+  el.addEventListener("click", function(){ setPlan(el.getAttribute("data-plan")); });
+});
+document.querySelectorAll("[data-quick-plan]").forEach(function(el){
+  el.addEventListener("click", function(){
+    setPlan(el.getAttribute("data-quick-plan"));
+    document.getElementById("products").scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+/* ---------- Cart / order panel ---------- */
+function renderCart(){
+  var area = document.getElementById("cartArea");
+  var ids = Object.keys(state.cart);
+  document.getElementById("mbCount").textContent = ids.length === 0 ? "0 items in your list" : ids.length + (ids.length === 1 ? " item" : " items") + " in your list";
+  if (!ids.length){
+    area.innerHTML = '<div class="cart-empty">Your list is empty.<br>Tap <b>Add</b> or <b>Sample</b> on any product in the catalogue.</div>';
+    return;
+  }
+  var ul = document.createElement("ul");
+  ul.className = "cart-list";
+  ids.forEach(function(id){
+    var p = productById(id), item = state.cart[id];
+    var li = document.createElement("li");
+    li.className = "cart-item";
+    var sampleNoQty = item.mode === "sample" && item.qty === 0;
+    li.innerHTML =
+      '<div class="info"><b></b><span class="mode ' + item.mode + '">' + (item.mode === "sample" ? "Free sample" : "Order") + '</span>' +
+      (sampleNoQty ? '<div style="font-size:12px;color:var(--muted)">Info &amp; photos via WhatsApp</div>' : '') + '</div>' +
+      (sampleNoQty ? '' :
+      '<span class="qty"><button type="button" data-a="m" aria-label="Decrease">−</button><output></output><button type="button" data-a="p" aria-label="Increase">+</button></span>') +
+      '<button type="button" class="remove">Remove</button>';
+    li.querySelector("b").textContent = p.name;
+    if (!sampleNoQty){
+      li.querySelector("output").textContent = fmt(item.qty);
+      li.querySelector('[data-a="m"]').addEventListener("click", function(){
+        item.qty = Math.max(item.mode === "sample" ? 1 : p.step, item.qty - (item.mode === "sample" ? 1 : p.step));
+        renderCart(); renderGrid();
+      });
+      li.querySelector('[data-a="p"]').addEventListener("click", function(){
+        item.qty = item.qty + (item.mode === "sample" ? 1 : p.step);
+        renderCart(); renderGrid();
+      });
+    }
+    li.querySelector(".remove").addEventListener("click", function(){
+      delete state.cart[id]; renderCart(); renderGrid();
+    });
+    ul.appendChild(li);
+  });
+  area.innerHTML = "";
+  area.appendChild(ul);
+}
+
+/* ---------- Send via WhatsApp ---------- */
+document.getElementById("buyerForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  var err = document.getElementById("formErr");
+  err.classList.remove("show"); err.textContent = "";
+  var hospital = document.getElementById("f-hospital").value.trim();
+  var name = document.getElementById("f-name").value.trim();
+  var dept = document.getElementById("f-dept").value.trim();
+  var city = document.getElementById("f-city").value.trim();
+  var phone = document.getElementById("f-phone").value.trim();
+  var address = document.getElementById("f-address").value.trim();
+  var notes = document.getElementById("f-notes").value.trim();
+  var ids = Object.keys(state.cart);
+
+  if (!ids.length){
+    err.textContent = "Please add at least one product first — tap Add or Sample on any item in the catalogue.";
+    err.classList.add("show");
+    document.getElementById("products").scrollIntoView({ behavior: "smooth" });
+    return;
+  }
+  if (!hospital || !name){
+    err.textContent = "Please fill in your hospital / clinic name and the contact person, so Prince knows who he is quoting for.";
+    err.classList.add("show");
+    return;
+  }
+
+  var plan = PLANS[state.plan];
+  var lines = [];
+  lines.push("Hello Prince, this is " + name + " from " + hospital + (city ? " (" + city + ")" : "") + ".");
+  if (dept) lines.push("Department: " + dept);
+  if (address) lines.push("Delivery address: " + address);
+  lines.push("");
+  lines.push(plan.line);
+  lines.push("");
+  var orders = ids.filter(function(id){ return state.cart[id].mode === "order"; });
+  var samples = ids.filter(function(id){ return state.cart[id].mode === "sample"; });
+  if (orders.length){
+    lines.push("PRODUCTS TO QUOTE:");
+    orders.forEach(function(id){
+      var p = productById(id);
+      lines.push("• " + p.name + " (" + p.sizes + ") — Qty: " + fmt(state.cart[id].qty) + " " + p.unit);
+    });
+    lines.push("");
+  }
+  if (samples.length){
+    lines.push("FREE SAMPLES REQUESTED:");
+    samples.forEach(function(id){
+      var p = productById(id);
+      var q = state.cart[id].qty;
+      lines.push("• " + p.name + " (" + p.sizes + ")" + (q > 0 ? " — " + q + " sample pcs" : " — please send info & photos"));
+    });
+    lines.push("");
+  }
+  lines.push("Plan: " + plan.label);
+  lines.push("Please send me the official quotation. Thank you!");
+  if (phone) lines.push("My mobile: " + phone);
+  if (notes) lines.push("Notes: " + notes);
+
+  var url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
+  window.open(url, "_blank");
+  showToast("Opening WhatsApp — just press send there.");
+});
+
+/* Mobile order bar appears once the visitor scrolls past the hero, so it never covers the hero buttons */
+var mobilebar = document.getElementById("mobilebar");
+function syncMobilebar(){
+  if (window.scrollY > 520) mobilebar.classList.add("show");
+  else mobilebar.classList.remove("show");
+}
+window.addEventListener("scroll", syncMobilebar, { passive: true });
+syncMobilebar();
+
+setPlan("trial");
+renderGrid();
+renderCart();
+</script>
+</body>
+</html>
