@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Interconnected Medical Equipment and Supplies Trading — choose products, request free samples, start a trial order or a 3, 6 or 12-month supply contract, and send it straight to Prince on WhatsApp." />
+<link rel="icon" href="data:," />
+<title>Interconnected – Order on WhatsApp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f7f6; --surface:#ffffff; --surface2:#eef3f1; --ink:#13222b; --muted:#5b6d75;
+    --line:#dce5e1; --teal:#0d766e; --teal-dark:#0a5c56; --teal-soft:#e0f2ef;
+    --navy:#0f2c3f; --amber:#b7791f; --amber-soft:#fdf3d7; --wa:#1faa55; --wa-dark:#178a44;
+    --danger:#b42318; --radius:14px; --shadow:0 10px 30px rgba(15,44,63,.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b1417; --surface:#132127; --surface2:#1a2b33; --ink:#eaf3f1; --muted:#9db3ba;
+      --line:#24383f; --teal:#2dd4bf; --teal-dark:#5eead4; --teal-soft:#123832;
+      --navy:#dbeafe; --amber:#fbbf24; --amber-soft:#33270a; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Manrope",system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Archivo", "Manrope",sans-serif;line-height:1.12;margin:0;letter-spacing:-.01em}
+  p{margin:0}
+  a{color:inherit}
+  button,[role="button"],select,summary,input,textarea{font:inherit}
+  button,select,summary,input:not([type="checkbox"]){min-height:44px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+  /* Top bar */
+  .topbar{position:sticky;top:0;z-index:40;background:var(--surface);border-bottom:1px solid var(--line)}
+  .topbar-in{display:flex;align-items:center;gap:12px;padding:10px 0}
+  .brand{display:flex;align-items:center;gap:11px;min-width:0}
+  .mark{width:42px;height:42px;flex:none;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:"Archivo";font-weight:800;font-size:19px}
+  @media (prefers-color-scheme: dark){.mark{background:var(--teal);color:#06231f}}
+  .brand b{display:block;font-size:15px;line-height:1.15}
+  .brand span{display:block;font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .top-actions{margin-left:auto;display:flex;gap:8px;align-items:center;flex:none}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;padding:10px 16px;font-weight:800;font-size:14px;border:1px solid transparent;cursor:pointer;text-decoration:none;min-height:44px;transition:transform .12s ease, background .12s ease}
+  .btn:active{transform:scale(.98)}
+  .btn-wa{background:var(--wa);color:#fff}
+  .btn-wa:hover{background:var(--wa-dark)}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+  .btn-teal{background:var(--teal);color:#fff}
+  @media (prefers-color-scheme: dark){.btn-teal{color:#06231f}}
+  .btn-teal:hover{background:var(--teal-dark)}
+  .btn-sm{padding:8px 12px;font-size:13px;min-height:40px}
+  .hide-sm{display:inline-flex}
+  @media (max-width:640px){.hide-sm{display:none}.brand span{display:none}}
+  /* Hero */
+  .hero{background:var(--navy);color:#eef6f4}
+  @media (prefers-color-scheme: dark){.hero{background:#0e222e;color:#eaf3f1}}
+  .hero-in{padding:38px 0 34px;display:grid;grid-template-columns:1.35fr .85fr;gap:28px;align-items:start}
+  @media (max-width:860px){.hero-in{grid-template-columns:1fr;padding:28px 0 26px}}
+  .hero h1{font-size:clamp(30px,5vw,46px);font-weight:800;color:#fff}
+  .hero h1 em{font-style:normal;color:#5eead4}
+  .hero p.lead{margin-top:12px;font-size:16.5px;color:#c7d8d3;max-width:56ch}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .chip{font-size:12.5px;font-weight:700;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 12px;color:#e6f2ef;background:rgba(255,255,255,.06)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .hero-card{background:#fff;color:#13222b;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+  .hero-card h3{font-size:15px;margin-bottom:4px}
+  .hero-card p{font-size:13.5px;color:#5b6d75}
+  .hero-card .person{display:flex;gap:12px;align-items:center;margin-top:12px;padding-top:12px;border-top:1px solid #e3ebe8}
+  .avatar{width:46px;height:46px;border-radius:50%;background:#0d766e;color:#fff;display:grid;place-items:center;font-weight:800;font-family:"Archivo";flex:none}
+  .hero-card .person b{display:block;font-size:14.5px}
+  .hero-card .person span{display:block;font-size:12.5px;color:#5b6d75}
+  .hero-card a.wa-big{margin-top:14px;width:100%}
+  /* Sections */
+  section{padding:30px 0 6px}
+  .sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:14px;flex-wrap:wrap}
+  .sec-head h2{font-size:24px;font-weight:800}
+  .sec-head p{color:var(--muted);font-size:14.5px;max-width:62ch;margin-top:5px}
+  .step-label{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+  /* Plans */
+  .plans{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  @media (max-width:980px){.plans{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:600px){.plans{grid-template-columns:1fr 1fr}}
+  .plan{position:relative;text-align:left;background:var(--surface);border:2px solid var(--line);border-radius:var(--radius);padding:15px 14px;cursor:pointer;min-height:44px;width:100%}
+  .plan:hover{border-color:var(--teal)}
+  .plan[aria-checked="true"]{border-color:var(--teal);background:var(--teal-soft)}
+  .plan .tag{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
+  .plan b{display:block;font-size:16.5px;margin:4px 0 3px;font-family:"Archivo"}
+  .plan span{display:block;font-size:12.8px;color:var(--muted);line-height:1.45}
+  .plan.pop{border-color:var(--amber)}
+  .plan.pop .tag{color:var(--amber)}
+  .plan.pop[aria-checked="true"]{background:var(--amber-soft);border-color:var(--amber)}
+  .plan .check{position:absolute;top:10px;right:10px;width:22px;height:22px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-size:12px;color:transparent;background:var(--surface)}
+  .plan[aria-checked="true"] .check{background:var(--teal);border-color:var(--teal);color:#fff}
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  @media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+  @media (max-width:480px){.steps{grid-template-columns:1fr}}
+  .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px}
+  .step .n{width:30px;height:30px;border-radius:50%;background:var(--teal-soft);color:var(--teal);display:grid;place-items:center;font-weight:800;font-size:14px;margin-bottom:9px}
+  .step b{display:block;font-size:14.5px;margin-bottom:3px}
+  .step p{font-size:13px;color:var(--muted)}
+  /* Catalog toolbar */
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+  .search{flex:1 1 240px;position:relative}
+  .search input{width:100%;padding:11px 14px 11px 40px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
+  .search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.55}
+  .filters{display:flex;gap:7px;flex-wrap:wrap}
+  .filter{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;cursor:pointer;min-height:40px}
+  .filter[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+  @media (prefers-color-scheme: dark){.filter[aria-pressed="true"]{background:var(--teal);color:#06231f;border-color:var(--teal)}}
+  /* Product grid + order panel */
+  .shop{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}
+  @media (max-width:980px){.shop{grid-template-columns:1fr}}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+  @media (max-width:560px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px;display:flex;flex-direction:column;gap:7px}
+  .card .cat{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
+  .card h3{font-size:16px;font-weight:700}
+  .card .sizes{font-size:13px;color:var(--muted)}
+  .card .desc{font-size:13px;color:var(--muted);flex:1}
+  .card .row{display:flex;gap:8px;align-items:center;margin-top:4px;flex-wrap:wrap}
+  .qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .qty button{width:40px;height:44px;border:0;background:var(--surface2);color:var(--ink);font-size:18px;font-weight:800;cursor:pointer}
+  .qty output{min-width:44px;text-align:center;font-weight:800;font-size:14px}
+  .qty small{font-size:11px;color:var(--muted);margin-left:2px}
+  .in-cart{font-size:12.5px;font-weight:800;color:var(--teal)}
+  .empty-note{background:var(--surface);border:1px dashed var(--line);border-radius:var(--radius);padding:22px;text-align:center;color:var(--muted);font-size:14px;grid-column:1/-1}
+  /* Order panel */
+  .panel{position:sticky;top:74px;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+  @media (max-width:980px){.panel{position:static}}
+  .panel-head{background:var(--teal-soft);padding:14px 16px;border-bottom:1px solid var(--line)}
+  .panel-head h3{font-size:16px}
+  .panel-head p{font-size:12.8px;color:var(--muted);margin-top:2px}
+  .panel-body{padding:14px 16px 16px}
+  .plan-echo{font-size:13px;font-weight:700;background:var(--surface2);border-radius:9px;padding:9px 11px;margin-bottom:12px}
+  .plan-echo span{color:var(--teal)}
+  .cart-list{list-style:none;margin:0 0 6px;padding:0;display:grid;gap:9px}
+  .cart-item{display:flex;gap:9px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:9px 10px}
+  .cart-item .info{flex:1;min-width:0}
+  .cart-item b{display:block;font-size:13.5px;line-height:1.3}
+  .cart-item .mode{font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+  .mode.order{color:var(--teal)} .mode.sample{color:var(--amber)}
+  .cart-item .qty button{width:34px;height:38px}
+  .cart-item .qty output{min-width:32px;font-size:13px}
+  .remove{border:0;background:none;color:var(--danger);font-size:12.5px;font-weight:700;cursor:pointer;padding:6px 2px;min-height:36px}
+  .cart-empty{font-size:13.5px;color:var(--muted);border:1px dashed var(--line);border-radius:10px;padding:13px;text-align:center;margin-bottom:6px}
+  .field{margin-top:11px}
+  .field label{display:block;font-size:12.5px;font-weight:800;margin-bottom:5px}
+  .field label i{font-style:normal;color:var(--danger)}
+  .field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--surface);color:var(--ink)}
+  .field textarea{min-height:64px;resize:vertical}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media (max-width:480px){.two{grid-template-columns:1fr}}
+  .send{width:100%;margin-top:14px;font-size:15.5px;padding:13px}
+  .send-note{font-size:12px;color:var(--muted);text-align:center;margin-top:8px}
+  .err{display:none;font-size:13px;font-weight:700;color:var(--danger);background:#fdf0ef;border:1px solid #f3c6c1;border-radius:9px;padding:9px 11px;margin-top:11px}
+  @media (prefers-color-scheme: dark){.err{background:#3a1512;border-color:#6e2a24}}
+  .err.show{display:block}
+  /* Process / trust */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+  @media (max-width:760px){.cols{grid-template-columns:1fr}}
+  .info-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:17px}
+  .info-card h3{font-size:16px;margin-bottom:9px}
+  .info-card ul{margin:0;padding-left:18px;font-size:14px;color:var(--muted);display:grid;gap:6px}
+  .info-card ul b{color:var(--ink)}
+  details{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:4px 16px;margin-bottom:9px}
+  summary{cursor:pointer;font-weight:800;font-size:14.5px;padding:10px 0;min-height:44px;display:flex;align-items:center}
+  details p{font-size:14px;color:var(--muted);padding:0 0 14px}
+  footer{margin-top:36px;border-top:1px solid var(--line);background:var(--surface)}
+  .foot{padding:22px 0 90px;display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;font-size:13px;color:var(--muted)}
+  .foot b{color:var(--ink)}
+  /* Mobile sticky bar */
+  .mobilebar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--surface);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:none;gap:10px;align-items:center;box-shadow:0 -6px 20px rgba(0,0,0,.08)}
+  @media (max-width:980px){.mobilebar{display:flex}}
+  .mobilebar .count{font-size:13.5px;font-weight:800;flex:1}
+  .mobilebar .count span{display:block;font-size:12px;color:var(--muted);font-weight:600}
+  .toast{position:fixed;left:50%;transform:translate(-50%,20px);bottom:86px;z-index:60;background:var(--navy);color:#fff;font-size:13.5px;font-weight:700;padding:11px 16px;border-radius:999px;opacity:0;pointer-events:none;transition:all .25s ease;max-width:92vw;text-align:center}
+  @media (prefers-color-scheme: dark){.toast{background:var(--teal);color:#06231f}}
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">IN</div>
+      <div>
+        <b>Interconnected</b>
+        <span>Medical Equipment &amp; Supplies Trading · Solano, Nueva Vizcaya</span>
+      </div>
+    </div>
+    <div class="top-actions">
+      <a class="btn btn-ghost hide-sm" href="#products">Browse products</a>
+      <a class="btn btn-wa" href="https://wa.me/639198569899?text=Hello%20Prince%2C%20I%20have%20a%20question%20about%20Interconnected%20medical%20supplies." target="_blank" rel="noopener">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.7 1.2 1.5 2 2.7 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+        +63 919 856 9899
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <h1>Hospital supplies, chosen here — <em>ordered on WhatsApp.</em></h1>
+      <p class="lead">Pick the products your hospital or clinic needs, choose free samples, a trial order, or a 3, 6 or 12-month supply contract — then send it in one tap. No account, no checkout, no waiting for email.</p>
+      <div class="chips">
+        <span class="chip">FDA-licensed importer</span>
+        <span class="chip">Based in Solano, Nueva Vizcaya</span>
+        <span class="chip">Serving hospitals &amp; clinics in Region II &amp; Luzon</span>
+        <span class="chip">Official quotation before any payment</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-wa" href="#products">Choose products ↓</a>
+        <button class="btn" style="background:#fff;color:#0f2c3f" data-quick-plan="sample">Request free samples</button>
+        <button class="btn" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.4)" data-quick-plan="trial">Start a trial order</button>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="Your contact">
+      <h3>Talk to a real person, not a call centre</h3>
+      <p>Every order from this page goes directly to Prince on WhatsApp. You will get an official quotation with prices first — you only confirm when you are happy.</p>
+      <div class="person">
+        <div class="avatar" aria-hidden="true">P</div>
+        <div>
+          <b>Prince</b>
+          <span>Representative, Interconnected Medical Equipment and Supplies Trading</span>
+        </div>
+      </div>
+      <a class="btn btn-wa wa-big" href="https://wa.me/639198569899?text=Hello%20Prince%2C%20I%20found%20the%20Interconnected%20ordering%20page.%20I%20would%20like%20to%20ask%20about%20your%20products." target="_blank" rel="noopener">Message Prince on WhatsApp</a>
+    </aside>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- STEP 1: PLAN -->
+  <section id="plan" aria-labelledby="plan-h">
+    <div class="sec-head">
+      <div>
+        <div class="step-label">Step 1 · Choose how to start</div>
+        <h2 id="plan-h">How do you want to begin?</h2>
+        <p>Most Philippine hospitals start small, test the quality, then sign a supply contract. Pick one — you can change it anytime before you send.</p>
+      </div>
+    </div>
+    <div class="plans" role="radiogroup" aria-label="Order type">
+      <button class="plan" role="radio" aria-checked="false" data-plan="sample">
+        <span class="check">✓</span><span class="tag">Free · No commitment</span>
+        <b>Request Samples</b>
+        <span>Try a few pieces first. Your nurses test the quality on the ward before you spend anything.</span>
+      </button>
+      <button class="plan" role="radio" aria-checked="true" data-plan="trial">
+        <span class="check">✓</span><span class="tag">Most popular start</span>
+        <b>Trial Order · 2 Weeks</b>
+        <span>A small 2-week supply for one department. Prove the quality and delivery, then decide.</span>
+      </button>
+      <button class="plan" role="radio" aria-checked="false" data-plan="3m">
+        <span class="check">✓</span><span class="tag">Supply contract</span>
+        <b>3-Month Contract</b>
+        <span>Monthly scheduled delivery for 3 months, with prices confirmed in your quotation.</span>
+      </button>
+      <button class="plan" role="radio" aria-checked="false" data-plan="6m">
+        <span class="check">✓</span><span class="tag">Supply contract</span>
+        <b>6-Month Contract</b>
+        <span>Half a year of steady supply. Less re-ordering work for your purchasing team.</span>
+      </button>
+      <button class="plan pop" role="radio" aria-checked="false" data-plan="12m">
+        <span class="check">✓</span><span class="tag">Best for big hospitals</span>
+        <b>12-Month Contract</b>
+        <span>A full-year supply agreement — priority stock and scheduled monthly deliveries all year.</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section aria-labelledby="how-h">
+    <div class="sec-head">
+      <div>
+        <h2 id="how-h">How ordering works in the Philippines</h2>
+        <p>The normal hospital process — nothing new to learn.</p>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><b>Choose &amp; send on WhatsApp</b><p>Pick products and quantities below, fill in your hospital name, and send. It opens WhatsApp with everything already written.</p></div>
+      <div class="step"><div class="n">2</div><b>Get an official quotation</b><p>Prince replies with a formal quotation — itemised prices, validity 15 days. No price is final until you see this.</p></div>
+      <div class="step"><div class="n">3</div><b>Your hospital issues a PO</b><p>Your purchasing / procurement signs the Purchase Order, the standard way hospitals in the Philippines buy.</p></div>
+      <div class="step"><div class="n">4</div><b>Delivery &amp; payment terms</b><p>Delivery with Delivery Receipt and Sales Invoice. Terms are agreed in the quotation — COD for first trial orders, Net 30 for contract accounts.</p></div>
+    </div>
+  </section>
+
+  <!-- STEP 2: PRODUCTS + ORDER PANEL -->
+  <section id="products" aria-labelledby="prod-h">
+    <div class="sec-head">
+      <div>
+        <div class="step-label">Step 2 · Choose your products</div>
+        <h2 id="prod-h">Product catalogue</h2>
+        <p>Set a quantity and tap <b>Add</b>, or tap <b>Sample</b> on any item to request free sample pieces of that product instead. Prices are confirmed in your official quotation.</p>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="search">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="search" type="search" placeholder="Search — e.g. syringe, cannula, Foley, oxygen…" aria-label="Search products">
+      </div>
+      <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+    </div>
+
+    <div class="shop">
+      <div class="grid" id="grid"></div>
+
+      <!-- STEP 3: ORDER PANEL -->
+      <aside class="panel" id="order" aria-labelledby="order-h">
+        <div class="panel-head">
+          <h3 id="order-h">Step 3 · Your order list</h3>
+          <p>Review your list, add your details, then send it to Prince.</p>
+        </div>
+        <div class="panel-body">
+          <div class="plan-echo">You are starting with: <span id="planEcho">Trial Order · 2 Weeks</span></div>
+          <div id="cartArea"></div>
+
+          <form id="buyerForm" novalidate>
+            <div class="field">
+              <label for="f-hospital">Hospital / Clinic name <i>*</i></label>
+              <input id="f-hospital" type="text" placeholder="e.g. De Vera Medical Center, Inc." autocomplete="organization">
+            </div>
+            <div class="two">
+              <div class="field">
+                <label for="f-name">Your name <i>*</i></label>
+                <input id="f-name" type="text" placeholder="e.g. Dr. / Nurse / Purchasing" autocomplete="name">
+              </div>
+              <div class="field">
+                <label for="f-dept">Department</label>
+                <input id="f-dept" type="text" placeholder="e.g. Neuro, IM Ward, ER, Procurement">
+              </div>
+            </div>
+            <div class="two">
+              <div class="field">
+                <label for="f-city">City / Province</label>
+                <input id="f-city" type="text" placeholder="e.g. Santiago City, Isabela">
+              </div>
+              <div class="field">
+                <label for="f-phone">Your mobile (optional)</label>
+                <input id="f-phone" type="tel" placeholder="09xx xxx xxxx" autocomplete="tel">
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-notes">Notes for Prince (optional)</label>
+              <textarea id="f-notes" placeholder="e.g. Please quote with delivery to our hospital. We need this monthly."></textarea>
+            </div>
+            <div class="err" id="formErr" role="alert"></div>
+            <button type="submit" class="btn btn-wa send">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.7 1.2 1.5 2 2.7 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4 0 .1 0 .7-.2 1.2z"/></svg>
+              Send my order to Prince on WhatsApp
+            </button>
+            <p class="send-note">Opens WhatsApp to <b>+63 919 856 9899</b> with your list already written. Nothing is final — Prince replies with your official quotation first.</p>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- TRUST / PROCESS -->
+  <section aria-labelledby="why-h">
+    <div class="sec-head"><div><h2 id="why-h">Good to know before you order</h2></div></div>
+    <div class="cols">
+      <div class="info-card">
+        <h3>About Interconnected</h3>
+        <ul>
+          <li><b>Interconnected Medical Equipment and Supplies Trading</b> — Solano, Nueva Vizcaya, Philippines</li>
+          <li><b>FDA-licensed</b> importer of medical supplies from India</li>
+          <li>Brands carried include <b>Vaxo-Ven</b> (syringes &amp; needles), <b>Vaxo-Flon</b> (IV cannula) and <b>Infuzor</b> (IV sets)</li>
+          <li>Your contact: <b>Prince — Representative</b>, WhatsApp +63 919 856 9899</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>Contracts, the simple version</h3>
+        <ul>
+          <li><b>Trial (2 weeks):</b> small quantity, one department — test quality and delivery first</li>
+          <li><b>3 / 6 / 12 months:</b> agreed monthly quantity, delivered on schedule, one quotation covers the term</li>
+          <li><b>Prices</b> are locked as stated in your signed quotation for the contract period</li>
+          <li><b>Payment:</b> COD on first trial orders; Net 30 terms for established contract accounts, as agreed in writing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section aria-labelledby="faq-h">
+    <div class="sec-head"><div><h2 id="faq-h">Common questions</h2></div></div>
+    <details>
+      <summary>Are the samples really free?</summary>
+      <p>Yes — sample pieces of syringes, needles, IV cannula and IV sets are free so your nurses and doctors can test the quality. Choose “Request Samples” in Step 1, tap Sample on the items you want, and send. Prince will confirm the sample delivery on WhatsApp.</p>
+    </details>
+    <details>
+      <summary>Why are there no prices on this page?</summary>
+      <p>Hospital prices depend on quantity, contract length and delivery location, so every buyer gets an official itemised quotation on WhatsApp first — valid for 15 days. You never pay anything from this page, and nothing is confirmed until your hospital issues a Purchase Order.</p>
+    </details>
+    <details>
+      <summary>What is the minimum for a trial order?</summary>
+      <p>A trial order is sized for about 2 weeks of use in one department — for example a ward, ER, ICU or a specialty like Neurology or Internal Medicine. Tell Prince your department’s usual consumption in the notes, and the quotation will be sized to match.</p>
+    </details>
+    <details>
+      <summary>How does a 3, 6 or 12-month contract work?</summary>
+      <p>You agree a monthly quantity per product. Interconnected delivers on schedule each month under one supply agreement, with prices as stated in your signed quotation. It removes monthly re-ordering and protects you from running out of ward consumables.</p>
+    </details>
+    <details>
+      <summary>Where do you deliver?</summary>
+      <p>Interconnected is based in Solano, Nueva Vizcaya and serves hospitals and clinics across Region II (Nueva Vizcaya, Isabela, Cagayan, Quirino) and elsewhere in Luzon. Delivery time and any delivery charge are stated clearly in your quotation before you confirm.</p>
+    </details>
+    <details>
+      <summary>I’m a clinic, pharmacy or school — can I order too?</summary>
+      <p>Yes. Private clinics, diagnostic centres, pharmacies, school clinics and rural health units can request samples, trial orders and contracts the same way. Just write your type of facility in the notes.</p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <b>Interconnected Medical Equipment and Supplies Trading</b><br>
+      Solano, Nueva Vizcaya, Philippines · FDA-licensed importer
+    </div>
+    <div>
+      Orders &amp; enquiries — <b>Prince, Representative</b><br>
+      WhatsApp: <a href="https://wa.me/639198569899" target="_blank" rel="noopener"><b>+63 919 856 9899</b></a>
+    </div>
+  </div>
+</footer>
+
+<div class="mobilebar" id="mobilebar">
+  <div class="count"><span id="mbCount">0 items in your list</span><span id="mbPlan">Trial Order · 2 Weeks</span></div>
+  <a class="btn btn-teal" href="#order">Review &amp; send →</a>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+var WA_NUMBER = "639198569899";
+
+var PLANS = {
+  sample: { label: "Request Free Samples", short: "Free Samples", line: "I would like to REQUEST FREE SAMPLES to test the quality first." },
+  trial:  { label: "Trial Order · 2 Weeks", short: "Trial Order", line: "I would like to start a TRIAL ORDER (2-week supply for one department)." },
+  "3m":   { label: "3-Month Supply Contract", short: "3-Month Contract", line: "I would like to start a 3-MONTH SUPPLY CONTRACT with monthly scheduled delivery." },
+  "6m":   { label: "6-Month Supply Contract", short: "6-Month Contract", line: "I would like to start a 6-MONTH SUPPLY CONTRACT with monthly scheduled delivery." },
+  "12m":  { label: "12-Month Supply Contract", short: "12-Month Contract", line: "I would like to start a 12-MONTH SUPPLY CONTRACT with monthly scheduled delivery." }
+};
+
+var CATEGORIES = ["All", "Syringes & Needles", "IV Therapy", "Catheters & Tubes", "Respiratory", "Diagnostics & Equipment"];
+
+var PRODUCTS = [
+  { id:"syr",  cat:"Syringes & Needles", name:"Vaxo-Ven Syringe with Needle", sizes:"1cc · 2ml · 3ml · 5ml · 10ml · 20ml", unit:"pcs", step:100, start:500, desc:"Disposable sterile syringes with needle — the everyday ward workhorse for injections and medication." },
+  { id:"ndl",  cat:"Syringes & Needles", name:"Vaxo-Ven Hypodermic Needle", sizes:"18G · 19G · 21G · 23G · 25G · 26G", unit:"pcs", step:100, start:500, desc:"Sterile disposable hypodermic needles, colour-coded by gauge for fast identification." },
+  { id:"can",  cat:"IV Therapy", name:"Vaxo-Flon IV Cannula", sizes:"18G · 20G · 22G · 24G · 26G", unit:"pcs", step:50, start:100, desc:"IV cannula with injection port and wings — smooth insertion, secure fixing on the ward." },
+  { id:"ivset",cat:"IV Therapy", name:"Infuzor IV Set", sizes:"ECO · Standard", unit:"pcs", step:50, start:100, desc:"Intravenous infusion set for reliable, controlled fluid and medication delivery." },
+  { id:"stop", cat:"IV Therapy", name:"3-Way Stop Cock", sizes:"Standard", unit:"pcs", step:10, start:50, desc:"Three-way stopcock for directing IV flow and adding medication lines without disconnecting." },
+  { id:"ext",  cat:"IV Therapy", name:"Extension Line", sizes:"Standard lengths", unit:"pcs", step:10, start:50, desc:"IV extension tubing — gives patients movement room and keeps lines organised at the bedside." },
+  { id:"btset",cat:"IV Therapy", name:"B.T. Set (Blood Transfusion Set)", sizes:"Standard", unit:"pcs", step:10, start:50, desc:"Blood transfusion set with filter, for safe and controlled transfusion in ward and ER." },
+  { id:"foley",cat:"Catheters & Tubes", name:"Foley Catheter", sizes:"Fr 8 · 10 · 12 · 14 · 16 · 18", unit:"pcs", step:10, start:50, desc:"Two-way Foley balloon catheter for urinary drainage — ward, ICU, OR and ER staple." },
+  { id:"ubag", cat:"Catheters & Tubes", name:"Urine Bag 2000ml", sizes:"2000ml with drain valve", unit:"pcs", step:10, start:50, desc:"Large-capacity urine collection bag with clear measurement markings." },
+  { id:"ryles",cat:"Catheters & Tubes", name:"Ryles Tube (NG Tube)", sizes:"Fr 8 · 10 · 12 · 14 · 16 · 18", unit:"pcs", step:10, start:50, desc:"Nasogastric / Ryles tube for feeding and gastric drainage." },
+  { id:"suc",  cat:"Catheters & Tubes", name:"Suction Catheter", sizes:"Fr 6 · 8 · 10 · 12 · 14 · 16", unit:"pcs", step:10, start:50, desc:"Sterile suction catheter for airway clearing in ward, ICU and emergency care." },
+  { id:"ett",  cat:"Catheters & Tubes", name:"Endotracheal Tube", sizes:"2.5 · 3.0 · 3.5 · 4.0 · 4.5 · 5.0 · 5.5 · 6.0 · 6.5 · 7.0 · 7.5 · 8.0", unit:"pcs", step:5, start:20, desc:"Cuffed and uncuffed ET tubes for OR, ICU and emergency airway management." },
+  { id:"o2",   cat:"Respiratory", name:"Oxygen Mask", sizes:"Adult · Pedia", unit:"pcs", step:10, start:50, desc:"Oxygen therapy mask with tubing — comfortable fit for ward and ER oxygen delivery." },
+  { id:"neb",  cat:"Respiratory", name:"Nebulizer Mask", sizes:"Adult · Pedia", unit:"pcs", step:10, start:50, desc:"Nebulizer mask kit with chamber and tubing for respiratory treatments." },
+  { id:"bp",   cat:"Diagnostics & Equipment", name:"BP Monitor", sizes:"Digital · Aneroid", unit:"units", step:1, start:2, desc:"Blood pressure monitors for wards, OPD clinics, school clinics and health centres." },
+  { id:"oxi",  cat:"Diagnostics & Equipment", name:"Pulse Oximeter", sizes:"Fingertip", unit:"units", step:1, start:2, desc:"Fingertip pulse oximeter — fast SpO2 and pulse checks at triage and bedside." },
+  { id:"therm",cat:"Diagnostics & Equipment", name:"Digital Thermometer", sizes:"Standard", unit:"pcs", step:5, start:20, desc:"Fast, accurate digital thermometers for wards, clinics and school health programmes." },
+  { id:"bed",  cat:"Diagnostics & Equipment", name:"Hospital Beds & Ward Equipment", sizes:"Manual · Electric — ask for options", unit:"units", step:1, start:1, desc:"Hospital beds and ward equipment for new wings, ward upgrades and clinic set-ups. Ask Prince for the current options." }
+];
+
+var state = { plan: "trial", filter: "All", query: "", cart: {} };
+// cart: id -> { qty:number, mode:"order"|"sample" }
+var pendingQty = {};
+PRODUCTS.forEach(function(p){ pendingQty[p.id] = p.start; });
+
+var grid = document.getElementById("grid");
+var filtersEl = document.getElementById("filters");
+var toastEl = document.getElementById("toast");
+var toastTimer = null;
+
+function showToast(msg){
+  toastEl.textContent = msg;
+  toastEl.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function(){ toastEl.classList.remove("show"); }, 2400);
+}
+function fmt(n){ return n.toLocaleString("en-PH"); }
+function productById(id){ for (var i=0;i<PRODUCTS.length;i++){ if (PRODUCTS[i].id===id) return PRODUCTS[i]; } return null; }
+
+/* ---------- Filters ---------- */
+CATEGORIES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "filter"; b.type = "button"; b.textContent = c;
+  b.setAttribute("aria-pressed", c === "All" ? "true" : "false");
+  b.addEventListener("click", function(){
+    state.filter = c;
+    var all = filtersEl.querySelectorAll(".filter");
+    for (var i=0;i<all.length;i++) all[i].setAttribute("aria-pressed", all[i].textContent === c ? "true" : "false");
+    renderGrid();
+  });
+  filtersEl.appendChild(b);
+});
+document.getElementById("search").addEventListener("input", function(e){
+  state.query = e.target.value.trim().toLowerCase();
+  renderGrid();
+});
+
+/* ---------- Product grid ---------- */
+function renderGrid(){
+  grid.innerHTML = "";
+  var visible = PRODUCTS.filter(function(p){
+    var okCat = state.filter === "All" || p.cat === state.filter;
+    var hay = (p.name + " " + p.sizes + " " + p.cat + " " + p.desc).toLowerCase();
+    return okCat && (!state.query || hay.indexOf(state.query) !== -1);
+  });
+  if (!visible.length){
+    var d = document.createElement("div");
+    d.className = "empty-note";
+    d.textContent = "No product matches your search. Clear the search, or message Prince on WhatsApp — if your hospital uses it, he will check it for you.";
+    grid.appendChild(d);
+    return;
+  }
+  visible.forEach(function(p){
+    var card = document.createElement("article");
+    card.className = "card";
+    var inCart = state.cart[p.id];
+    card.innerHTML =
+      '<div class="cat"></div><h3></h3><div class="sizes"></div><p class="desc"></p>' +
+      '<div class="row">' +
+        '<span class="qty"><button type="button" data-act="minus" aria-label="Decrease quantity">−</button><output></output><button type="button" data-act="plus" aria-label="Increase quantity">+</button></span>' +
+        '<small class="qty" style="border:0"></small>' +
+      '</div>' +
+      '<div class="row">' +
+        '<button type="button" class="btn btn-teal btn-sm" data-act="add">Add to order</button>' +
+        '<button type="button" class="btn btn-ghost btn-sm" data-act="sample">Sample</button>' +
+        (inCart ? '<span class="in-cart"></span>' : '') +
+      '</div>';
+    card.querySelector(".cat").textContent = p.cat;
+    card.querySelector("h3").textContent = p.name;
+    card.querySelector(".sizes").textContent = "Sizes: " + p.sizes;
+    card.querySelector(".desc").textContent = p.desc;
+    card.querySelector("output").textContent = fmt(pendingQty[p.id]);
+    card.querySelector("small.qty").textContent = p.unit;
+    if (inCart){
+      card.querySelector(".in-cart").textContent = "✓ In your list: " + fmt(inCart.qty) + " " + p.unit + (inCart.mode === "sample" ? " (samples)" : "");
+    }
+    card.querySelector('[data-act="minus"]').addEventListener("click", function(){
+      pendingQty[p.id] = Math.max(p.step, pendingQty[p.id] - p.step); renderGrid();
+    });
+    card.querySelector('[data-act="plus"]').addEventListener("click", function(){
+      pendingQty[p.id] = pendingQty[p.id] + p.step; renderGrid();
+    });
+    card.querySelector('[data-act="add"]').addEventListener("click", function(){
+      state.cart[p.id] = { qty: pendingQty[p.id], mode: "order" };
+      renderGrid(); renderCart();
+      showToast(p.name + " — added to your order list.");
+    });
+    card.querySelector('[data-act="sample"]').addEventListener("click", function(){
+      var sq = p.unit === "units" ? 1 : Math.min(10, Math.max(5, p.step));
+      if (p.id === "bed") sq = 0;
+      state.cart[p.id] = { qty: sq, mode: "sample" };
+      if (state.plan !== "sample" && !anyOrderItems()) setPlan("sample");
+      renderGrid(); renderCart();
+      showToast(p.id === "bed" ? "Added — Prince will send bed options & photos as your sample info." : p.name + " — sample request added.");
+    });
+    grid.appendChild(card);
+  });
+}
+function anyOrderItems(){
+  for (var k in state.cart){ if (state.cart[k].mode === "order") return true; }
+  return false;
+}
+
+/* ---------- Plans ---------- */
+function setPlan(key){
+  state.plan = key;
+  var plans = document.querySelectorAll(".plan");
+  for (var i=0;i<plans.length;i++){
+    plans[i].setAttribute("aria-checked", plans[i].getAttribute("data-plan") === key ? "true" : "false");
+  }
+  document.getElementById("planEcho").textContent = PLANS[key].label;
+  document.getElementById("mbPlan").textContent = PLANS[key].label;
+}
+document.querySelectorAll(".plan").forEach(function(el){
+  el.addEventListener("click", function(){ setPlan(el.getAttribute("data-plan")); });
+});
+document.querySelectorAll("[data-quick-plan]").forEach(function(el){
+  el.addEventListener("click", function(){
+    setPlan(el.getAttribute("data-quick-plan"));
+    document.getElementById("products").scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+/* ---------- Cart / order panel ---------- */
+function cartCount(){
+  var n = 0; for (var k in state.cart) n++;
+  return n;
+}
+function renderCart(){
+  var area = document.getElementById("cartArea");
+  var ids = Object.keys(state.cart);
+  document.getElementById("mbCount").textContent = ids.length === 0 ? "0 items in your list" : ids.length + (ids.length === 1 ? " item" : " items") + " in your list";
+  if (!ids.length){
+    area.innerHTML = '<div class="cart-empty">Your list is empty.<br>Tap <b>Add</b> or <b>Sample</b> on any product above.</div>';
+    return;
+  }
+  var ul = document.createElement("ul");
+  ul.className = "cart-list";
+  ids.forEach(function(id){
+    var p = productById(id), item = state.cart[id];
+    var li = document.createElement("li");
+    li.className = "cart-item";
+    var sampleNoQty = item.mode === "sample" && item.qty === 0;
+    li.innerHTML =
+      '<div class="info"><b></b><span class="mode ' + item.mode + '">' + (item.mode === "sample" ? "Free sample" : "Order") + '</span>' +
+      (sampleNoQty ? '<div style="font-size:12px;color:var(--muted)">Info &amp; photos via WhatsApp</div>' : '') + '</div>' +
+      (sampleNoQty ? '' :
+      '<span class="qty"><button type="button" data-a="m" aria-label="Decrease">−</button><output></output><button type="button" data-a="p" aria-label="Increase">+</button></span>') +
+      '<button type="button" class="remove">Remove</button>';
+    li.querySelector("b").textContent = p.name;
+    if (!sampleNoQty){
+      li.querySelector("output").textContent = fmt(item.qty);
+      li.querySelector('[data-a="m"]').addEventListener("click", function(){
+        item.qty = Math.max(item.mode === "sample" ? 1 : p.step, item.qty - (item.mode === "sample" ? 1 : p.step));
+        renderCart(); renderGrid();
+      });
+      li.querySelector('[data-a="p"]').addEventListener("click", function(){
+        item.qty = item.qty + (item.mode === "sample" ? 1 : p.step);
+        renderCart(); renderGrid();
+      });
+    }
+    li.querySelector(".remove").addEventListener("click", function(){
+      delete state.cart[id]; renderCart(); renderGrid();
+    });
+    ul.appendChild(li);
+  });
+  area.innerHTML = "";
+  area.appendChild(ul);
+}
+
+/* ---------- Send via WhatsApp ---------- */
+document.getElementById("buyerForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  var err = document.getElementById("formErr");
+  err.classList.remove("show"); err.textContent = "";
+  var hospital = document.getElementById("f-hospital").value.trim();
+  var name = document.getElementById("f-name").value.trim();
+  var dept = document.getElementById("f-dept").value.trim();
+  var city = document.getElementById("f-city").value.trim();
+  var phone = document.getElementById("f-phone").value.trim();
+  var notes = document.getElementById("f-notes").value.trim();
+  var ids = Object.keys(state.cart);
+
+  if (!ids.length){
+    err.textContent = "Please add at least one product first — tap Add or Sample on any item in the catalogue.";
+    err.classList.add("show");
+    document.getElementById("products").scrollIntoView({ behavior: "smooth" });
+    return;
+  }
+  if (!hospital || !name){
+    err.textContent = "Please fill in your hospital / clinic name and your name, so Prince knows who he is quoting for.";
+    err.classList.add("show");
+    return;
+  }
+
+  var plan = PLANS[state.plan];
+  var lines = [];
+  lines.push("Hello Prince, this is " + name + " from " + hospital + (city ? " (" + city + ")" : "") + ".");
+  if (dept) lines.push("Department: " + dept);
+  lines.push("");
+  lines.push(plan.line);
+  lines.push("");
+  var orders = ids.filter(function(id){ return state.cart[id].mode === "order"; });
+  var samples = ids.filter(function(id){ return state.cart[id].mode === "sample"; });
+  if (orders.length){
+    lines.push("PRODUCTS TO QUOTE:");
+    orders.forEach(function(id){
+      var p = productById(id);
+      lines.push("• " + p.name + " (" + p.sizes + ") — Qty: " + fmt(state.cart[id].qty) + " " + p.unit);
+    });
+    lines.push("");
+  }
+  if (samples.length){
+    lines.push("FREE SAMPLES REQUESTED:");
+    samples.forEach(function(id){
+      var p = productById(id);
+      var q = state.cart[id].qty;
+      lines.push("• " + p.name + " (" + p.sizes + ")" + (q > 0 ? " — " + q + " sample pcs" : " — please send info & photos"));
+    });
+    lines.push("");
+  }
+  lines.push("Plan: " + plan.label);
+  lines.push("Please send me the official quotation. Thank you!");
+  if (phone) lines.push("My mobile: " + phone);
+  if (notes) lines.push("Notes: " + notes);
+
+  var url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n"));
+  window.open(url, "_blank");
+  showToast("Opening WhatsApp — just press send there.");
+});
+
+setPlan("trial");
+renderGrid();
+renderCart();
+</script>
+</body>
+</html>
